@@ -1,7 +1,6 @@
 import os
 import shutil
 
-import keyboard as kb
 from pyfiglet import figlet_format
 
 cols, rows = shutil.get_terminal_size()
@@ -27,18 +26,22 @@ while True:
     for char in custom_char_replace:
         total = total.replace(char, custom_char_replace[char])
 
+    # Paddings
+    padding = int(rows/3)
     # Top padding
-    for i in range(int(len(total)/5)):
+    for i in range(padding):
         print()
 
-    # Right padding (useless until text alignment added)
-    # Bottom padding (pretty much useless as well)
     # Left padding
-    for i in range(5):
-        total.replace('\n', f"{' '*cols}\n")
+    total = total.replace('\n', '\n'.center(cols-15))
 
     # Display total
     print(total)
+
+    # Bottom padding
+    for i in range(padding-1):
+        print()
+
 
     # Get input
     inp = input("+/-/e: ")
@@ -53,4 +56,7 @@ while True:
     with open(total_txt, 'w') as total_file:
         total_file.write(f"{counter}")
     if inp == 'e':
-        exit()
+        break
+
+os.system('clear')        
+exit()
