@@ -1,6 +1,7 @@
 import os
 import shutil
 
+from colorama import Fore, Back, Style
 from pyfiglet import figlet_format
 
 
@@ -41,7 +42,20 @@ def disp(counter, total_txt):
         total = total.replace('\n', '\n'.center(cols-15))
 
         # Display total
-        print(total)
+        if counter % 10000 == 0:
+            print(f"{Fore.MAGENTA}{total}")
+        elif counter % 1000 == 0:
+            print(f"{Fore.CYAN}{total}")
+        elif counter % 100 == 0:
+            print(f"{Fore.YELLOW}{total}")
+        elif counter % 10 == 0:
+            print(f"{Fore.GREEN}{Style.BRIGHT}{total}")
+        elif counter % 5 == 0:
+            print(f"{Fore.GREEN}{total}")
+        else:
+            print(total)
+
+        print(Style.RESET_ALL)
 
         # Bottom padding
         for i in range(padding-1):
@@ -49,7 +63,7 @@ def disp(counter, total_txt):
 
 
         # Get input
-        inp = input("+/-/e: ")
+        inp = input(f"+/-/e: ")
         if inp == "-":
             counter = dec(counter)
             if counter < 0:

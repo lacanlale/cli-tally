@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "337618e6ae5334eda29bddb8d4f5de311f0bb79bf0ff416d1f2776f64ab49e17"
+            "sha256": "14c3fc7e1ac9fdc53753c7e6d3d20c9086b774ef2960fa64439830544c8569c0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,13 +16,13 @@
         ]
     },
     "default": {
-        "keyboard": {
+        "colorama": {
             "hashes": [
-                "sha256:63ed83305955939ca5c9a73755e5cc43e8242263f5ad5fd3bb7e0b032f3d308b",
-                "sha256:8e9c2422f1217e0bd84489b9ecd361027cc78415828f4fe4f88dd4acd587947b"
+                "sha256:7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff",
+                "sha256:e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"
             ],
             "index": "pypi",
-            "version": "==0.13.5"
+            "version": "==0.4.3"
         },
         "pyfiglet": {
             "hashes": [

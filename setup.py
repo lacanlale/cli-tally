@@ -13,7 +13,7 @@ setup(
             'tally = tally.__main__:main'
         ]
     },
-    install_requires=['pyfiglet>=0.8.post'],
+    install_requires=['pyfiglet>=0.8.post','colorama==0.4.3'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3.5',

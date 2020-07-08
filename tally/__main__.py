@@ -1,9 +1,15 @@
-import tally.__init__ as m
+from colorama import init
+from colorama import Fore, Back, Style
+import tally.__init__ as __init__
 
 
 def main():
-    count, fn = m.get_counts()
-    m.disp(count, fn)
+    ##### Required for colorama
+    init()
+
+    ##### Get counts and run main display
+    count, fn = __init__.get_counts()
+    __init__.disp(count, fn)
 
 
 if __name__ == '__main__':
