@@ -7,7 +7,6 @@ verify_ssl = true
 
 [packages]
 pyfiglet = "*"
-keyboard = "*"
 
 [requires]
 python_version = "3.8"
