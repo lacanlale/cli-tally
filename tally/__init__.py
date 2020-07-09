@@ -7,7 +7,8 @@ from pyfiglet import figlet_format
 
 ##### Get pre-exising total. Create a new txt otherwise
 def get_counts():
-    total_txt = "total.txt"
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    total_txt = f"{script_dir}total.txt"
     if not os.path.isfile(total_txt):
         counter = 0
     else:
